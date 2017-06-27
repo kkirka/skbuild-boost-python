@@ -25,6 +25,7 @@ message("${boost_python_library_target}")
 
 function(link_boost_python target)
     target_include_directories(${target} PUBLIC ${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIR})
+    message("Linking against ${boost_python_library_target}")
     target_link_libraries(${target} ${boost_python_library_target})
 endfunction()
 
